@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Second task</title>
+    <script src="script.js"></script>
+    <script src="demo.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Task 1</h2> 
+    <div class="task1 border">
+        <div> 
+            <p>This is an input for all subtasks. </p>
+            <p>Enter an array of numbers separated by commas</p>
+            <input type="text" id="arrayA" placeholder="Enter an array"/> 
+            <span id="subSumResult"></span>
+        </div>
+        <div>
+            <p class="subtitle">a) Sub sum</p>
+            <p>Example: <span class="answer_span">2, -1, 2, 3</span>, -9 = 6</p>
+            <span>1st solution</span> 
+            <input type="button" value="Get sub sum" onclick="getResultSumSub1()"/> <br><br>
+            <span>2nd solution </span> 
+            <input type="button" value="Get sub sum" onclick="getResultSumSub2()"/>
+        </div>
+        <div>
+            <p class="subtitle">b) Search</p>
+            <input type="button" value="Get min value" onclick="getResultMinValue()"/> <br><br>
+            <input type="button" value="Get max value" onclick="getResultMaxValue()"/><br><br>
+            <input type="button" value="Get median value" onclick="getResultMedianValue()"/>
+        </div>
+        <div>
+            <p class="subtitle">c) Selection Task</p>
+            <p>Example: 1, 3, 7, 4, 6, 7, 8, <span class="answer_span">1, 2, 5, 7, 8, 90</span>, 1</p>
+            <input type="button" value="Get max increasing sub" onclick="getResultMaxIncreasingSub()"/>
+        </div>
+    </div>
+    <h2>Task 2</h2>
+    <div class="task2 border">
+        <p>Enter a date in a default string format or in other string format or in ms.<br> 
+            If date entered in other string format enter an input date format.<br> 
+            If you want to get date in other string format enter an output date format.<br> 
+            If you want to get date with a month check "Long date".<br> 
+            If you want to see how far from now is this date check "From now"  </p>
+        <input type="text" placeholder="Enter a date" id="date_input"/> <br/>
+        <span>Input date as:</span>
+        <input type="radio" name="input_type" id="input_type_string" value="string" checked/>
+        <label for="input_type_string">string</label>
+        <input type="radio" name="input_type" id="input_type_ms" value="ms"/>
+        <label for="input_type_ms">ms</label> <br/>
+        <input type="text" placeholder="Enter an input date format" id="input_format"/>
+        <span class="note">Note: format by default is DDMMYYYY</span> <br/>
+        <input type="text" placeholder="Enter an output date format" id="output_format"/>
+        <span class="note">Note: format by default is DD-MM-YYYY</span> <br/>
+        <input type="checkbox" id="long_date"/>
+        <label for="long_date">Long Date</label> <br/>
+        <input type="checkbox" id="from_now"/>
+        <label for="from_now">From Now</label> <br/>
+        <input type="button" value="Get Date" onclick="getDate()"/> <br/>
+        <span>Result:&nbsp;</span><span id="date_result"></span>
+    </div>
+    <h2>Task 3</h2>
+    <div class="border">
+        <div>
+            <p>Enter a text, what you want to format</p>
+            <textarea name="" id="text_to_format" cols="30" rows="5"></textarea>
+        </div>
+        <div>
+            <p>Enter a maximum length of a line (if nessesary).<br> Default: 3</p>
+            <input type="text" id="max_line_length" >
+        </div>
+        <div>
+            <p>Enter a maximum number of lines (if nessesary).<br> Default: 2</p>
+            <input type="text" id="max_number_of_lines">
+        </div>
+        <div>
+            <p>Enter a type of format (if nessesary)<br>Possible types: перенос по слову, перенос по символу,<br> перенос по предложению, переносов нет<br>Default: перенос по символу</p>
+            <input type="text" id="format"><br><br>
+        </div>
+        <div>
+            <input type="button" value="Get format text" onclick="GetResultFormatText()"/>
+            <p>Format text:</p>
+            <textarea name="" id="text_result" cols="30" rows="5"></textarea>
+        </div>
+    </div>
+    <h2>Task 4</h2>
+    <div class="border">
+        <div>
+            <p>Note: operations sum, substract, multiply, divide can be performed on any number of numbers. Example divide: 100,2,5,4 = 2.5 <br>
+                Operation power can be performed on two numbers. If you entered more than two numbers there will be two first. Example: 5,2 = 25 <br>
+                Other operations can be performed on only one number. If you entered more than one number there will be only first. Example factorial: 5 = 120</p>
+            <p>Enter an array of numbers separated by commas or a single number</p>
+            <input id="arrayB" placeholder="Enter numbers" type="text">
+            <input type="button" value="sum" onclick="GetResultSum()">
+            <input type="button" value="subtract" onclick="GetResultSubtract()">
+            <input type="button" value="multiply" onclick="GetResultMultiply()">
+            <input type="button" value="divide" onclick="GetResultDivide()">
+            <input type="button" value="sin" onclick="GetResultSin()">
+            <input type="button" value="cos" onclick="GetResultCos()">
+            <input type="button" value="tg" onclick="GetResultTg()">
+            <input type="button" value="ctg" onclick="GetResultCtg()">
+            <input type="button" value="power" onclick="GetResultPower()">
+            <input type="button" value="squared" onclick="GetResultSquared()">
+            <input type="button" value="sqrt" onclick="GetResultSqrt()">
+            <input type="button" value="factorial" onclick="GetResultFactorial()">
+            <input type="button" value="log" onclick="GetResultLog()">
+            <input type="button" value="exp" onclick="GetResultExp()">
+        </div>
+        <p id="operationResult"></p>
+    </div>
+    <h2>Task 5</h2>
+    <div class="border">
+        <div>
+            <p>Enter an array of numbers separated by commas</p>
+            <input id="arrayC" placeholder="Enter numbers" type="text">
+            <input type="button" value="Bubble Sort" onclick="GetBubbleSort()">
+            <input type="button" value="Selection Sort" onclick="GetSelectionSort()">
+            <input type="button" value="Insertion Sort" onclick="GetInsertionSort()">
+            <input type="button" value="Shell Sort" onclick="GetShellSort()">
+            <input type="button" value="Quick Sort" onclick="GetQuickSort()">
+            <p id="sortResult"></p>
+        </div>
+    </div>
+    <h2>Task 6</h2>
+    <div class="border">
+        <p>Note: Enter a number what you want to convert and select the desired number system. <br> If you want to convert from binary/octal into decimal you can check signed if it nessesary (default unsigned conversion)<br>Hexadecimal conversion only works for 16-bit integers, octal and binary for 32-bit integers</p>
+        <p>Examples of entring numbers:<br>Binary: 101, 11111111111111111111111101110010<br>Decimal: 7, -90<br>Octal: 37777777562‬, 16600‬<br>Hexadecimal: 1D80‬, FFE3</p>
+        <input type="text" placeholder="Binary" id="binary_value"> 
+        <span id="binary_result"></span>
+        <div>
+            <input type="radio" name="binary_base" value="8" id="binary_base_8" />
+            <label for="binary_base_8">8</label> 
+            <input type="radio" name="binary_base" value="10" id="binary_base_10"/> 
+            <label for="binary_base_10">10</label> 
+            <input type="radio" name="binary_base"  value="16" id="binary_base_16"/> 
+            <label for="binary_base_16">16</label> 
+            <input type="checkbox" value="signed" id="binary_sign"/>
+            <label for="binary_sign">signed</label>
+        </div>
+        <input type="button" value="Convert from binary" onclick="ConvertFromBinary()"> <br><br>
+
+        <input type="text" placeholder="Octal" id="octal_value"> 
+        <span id="octal_result"></span>
+        <div>
+            <input type="radio" name="octal_base" value="2" id="octal_base_2"/>
+            <label for="octal_base_2">2</label> 
+            <input type="radio" name="octal_base" value="10" id="octal_base_10"/>
+            <label for="octal_base_10">10 </label>
+            <input type="radio" name="octal_base"  value="16" id="octal_base_16"/>
+            <label for="octal_base_16">16</label>
+            <input type="checkbox" value="signed" id="octal_sign"/>
+            <label for="octal_sign">signed</label>
+        </div>
+        <input type="button" value="Convert from octal" onclick="ConvertFromOctal()"><br><br>
+
+        <input type="text" placeholder="Decimal" id="dec_value"> <span id="dec_result"></span>
+        <div>
+            <input type="radio" name="dec_base" value="2" id="dec_base_2"/> 
+            <label for="dec_base_2">2</label> 
+            <input type="radio" name="dec_base" value="8" id="dec_base_8"/> 
+            <label for="dec_base_8">8</label> 
+            <input type="radio" name="dec_base"  value="16" id="dec_base_16"/> 
+            <label for="dec_base_16">16</label> 
+        </div>
+        <input type="button" value="Convert from decimal" onclick="ConvertFromDecimal()"><br><br>
+
+        <input type="text" placeholder="Hexadecimal" id="hex_value"> <span id="hex_result"></span>
+            <div>
+            <input type="radio" name="hex_base" value="2" id="hex_base_2"/> 
+            <label for="hex_base_2">2</label>
+            <input type="radio" name="hex_base" value="8" id="hex_base_8"/> 
+            <label for="hex_base_8">8</label>
+            <input type="radio" name="hex_base"  value="10" id="hex_base_10"/> 
+            <label for="hex_base_10">10</label>
+        </div>
+        <input type="button" value="Convert from hex" onclick="ConvertFromHexadecimal()"><br><br>
+    </div>
+    <h2>Task 7</h2>
+    <div class="border">
+        <p>Enter two numbers separated by commas, choose a type of operation. If you want to store the result of operation check cached.</p>
+        <input type="text" placeholder="Enter two numbers" id="arrayD"><br>
+        <input type="radio" name="operation" value="sum" id="operation_sum"/>
+        <label for="operation_sum">+</label> <br>
+        <input type="radio" name="operation" value="sub" id="operation_sub"/>
+        <label for="operation_sub">-</label> <br>
+        <input type="radio" name="operation"  value="multi" id="operation_multi"/>
+        <label for="operation_multi">*</label> <br>
+        <input type="radio" name="operation"  value="divide" id="operation_divide"/>
+        <label for="operation_divide">/</label> <br>
+        <input type="checkbox" value="cached" id="isCached"/> 
+        <label for="isCached">cached</label> <br>
+        <input type="button" onclick="cachedCalculation()" value="Get result"> <br>
+        <span id="cachedResult"></span>
+    </div>
+</body>
+</html>

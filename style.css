@@ -1,0 +1,26 @@
+.task1 {
+    display:flex;
+    flex-wrap: wrap;
+}
+.task1 > div {
+    margin-right:50px;
+}
+.subtitle {
+    font-weight:bold;
+    font-size:20px;
+}
+.answer_span {
+    font-weight:bold;
+    text-decoration-line: underline;
+}
+.border {
+    border: 1px solid black;
+    padding:10px 10px 20px 10px;
+}
+.task2 > input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.note{
+    color: darkgray;
+}
